@@ -75,7 +75,7 @@ export class MarkerManager {
       title: marker.title
     });
     this._markers.set(marker, markerPromise);
-    
+
   }
 
   getNativeMarker(marker: AgmMarker): Promise<Marker> {
