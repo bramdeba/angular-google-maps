@@ -2,6 +2,7 @@ node_modules/
 dist
 docs_generated
 src/**/*.js
+!marker-clusterer.js
 src/**/*.map
 src/**/*.ngfactory.js
 .tmp
