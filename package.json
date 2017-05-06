@@ -61,7 +61,9 @@
   "bugs": {
     "url": "https://github.com/SebastianM/angular-google-maps/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "js-marker-clusterer": "^1.0.0"
+  },
   "description": "Angular 2+ components for Google Maps",
   "devDependencies": {
     "@angular/animations": "^4.0.0",

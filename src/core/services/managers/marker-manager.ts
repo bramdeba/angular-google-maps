@@ -7,6 +7,8 @@ import {AgmMarker} from './../../directives/marker';
 import {GoogleMapsAPIWrapper} from './../google-maps-api-wrapper';
 import {Marker} from './../google-maps-types';
 
+declare var MarkerClusterer: any;
+
 @Injectable()
 export class MarkerManager {
   private _markers: Map<AgmMarker, Promise<Marker>> =
@@ -73,6 +75,7 @@ export class MarkerManager {
       title: marker.title
     });
     this._markers.set(marker, markerPromise);
+    
   }
 
   getNativeMarker(marker: AgmMarker): Promise<Marker> {
