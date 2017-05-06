@@ -1,53 +1,74 @@
 {
-  "name": "@agm/core-src",
-  "version": "1.0.0-beta.0",
-  "description": "Angular 2+ components for Google Maps",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SebastianM/angular-google-maps.git"
-  },
-  "keywords": [
-    "angular",
-    "ng",
-    "google-maps",
-    "maps",
-    "google",
-    "gmaps",
-    "ng2",
-    "angular2"
+  "_args": [
+    [
+      {
+        "raw": "bramdeba/angular-google-maps",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "bramdeba/angular-google-maps",
+        "spec": "github:bramdeba/angular-google-maps",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:bramdeba/angular-google-maps.git",
+          "sshUrl": "git+ssh://git@github.com/bramdeba/angular-google-maps.git",
+          "httpsUrl": "git+https://github.com/bramdeba/angular-google-maps.git",
+          "gitUrl": "git://github.com/bramdeba/angular-google-maps.git",
+          "shortcut": "github:bramdeba/angular-google-maps",
+          "directUrl": "https://raw.githubusercontent.com/bramdeba/angular-google-maps/master/package.json"
+        }
+      },
+      "C:\\Bitnami\\wampstack-5.5.29-1\\apache2\\htdocs\\StreetArtMap\\git\\street-art-map"
+    ]
   ],
-  "scripts": {
-    "clean": "rimraf dist && rimraf .tmp && mkdir dist && mkdir .tmp && rimraf 'src/**/*.ngfactory.ts'",
-    "prebuild": "npm run clean",
-    "build": "npm run lint && npm run scripts && npm run packagejson && npm run copyassets",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "packagejson": "node ./scripts/create-package-json.js",
-    "copyassets": "cp -R assets/release/* dist/core && cp LICENSE dist/core",
-    "scripts": "npm run ngc:esm && npm run bundle:umd",
-    "bundle:umd": "rollup -c rollup.config.js",
-    "ngc:esm": "ngc -p tsconfig.json",
-    "clang:format": "clang-format --glob=src/**/*.ts -i",
-    "postngc:esm": "mkdir -p dist/ && cp -R .tmp/esm/src/* dist/ && rimraf src/**/*.ngfactory.ts",
-    "test": "karma start",
-    "test:watch": "karma start --no-single-run --auto-watch",
-    "ci": "npm run build && npm run test"
+  "_from": "bramdeba/angular-google-maps",
+  "_id": "@agm/core-src@1.0.0-beta.0",
+  "_inCache": true,
+  "_location": "/@agm/core-src",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "bramdeba/angular-google-maps",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "bramdeba/angular-google-maps",
+    "spec": "github:bramdeba/angular-google-maps",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:bramdeba/angular-google-maps.git",
+      "sshUrl": "git+ssh://git@github.com/bramdeba/angular-google-maps.git",
+      "httpsUrl": "git+https://github.com/bramdeba/angular-google-maps.git",
+      "gitUrl": "git://github.com/bramdeba/angular-google-maps.git",
+      "shortcut": "github:bramdeba/angular-google-maps",
+      "directUrl": "https://raw.githubusercontent.com/bramdeba/angular-google-maps/master/package.json"
+    }
   },
-  "author": "Sebastian Müller <info@sebastian-mueller.net>",
-  "license": "MIT",
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git://github.com/bramdeba/angular-google-maps.git#e728ed826214e5f977f0cbdb67c9e8ae36e5722f",
+  "_shasum": "1b3a5b8c6352a9265566a7653c4d1a5f35889e57",
+  "_shrinkwrap": null,
+  "_spec": "bramdeba/angular-google-maps",
+  "_where": "C:\\Bitnami\\wampstack-5.5.29-1\\apache2\\htdocs\\StreetArtMap\\git\\street-art-map",
+  "author": {
+    "name": "Sebastian Müller",
+    "email": "info@sebastian-mueller.net"
+  },
   "bugs": {
     "url": "https://github.com/SebastianM/angular-google-maps/issues"
   },
-  "homepage": "https://angular-maps.com",
-  "peerDependencies": {
-    "@angular/common": "^4.0.0 || ^2.0.0",
-    "@angular/core": "^4.0.0 || ^2.0.0"
-  },
+  "dependencies": {},
+  "description": "Angular 2+ components for Google Maps",
   "devDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0",
     "@angular/animations": "^4.0.0",
+    "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/platform-server": "^4.0.0",
@@ -58,6 +79,7 @@
     "awesome-typescript-loader": "3.1.2",
     "clang-format": "1.0.46",
     "codelyzer": "3.0.0-beta.4",
+    "concurrently": "^3.4.0",
     "conventional-changelog": "^1.1.0",
     "copy-webpack-plugin": "^4.0.1",
     "copyfiles": "^1.0.0",
@@ -85,11 +107,56 @@
     "webpack": "2.3.3",
     "zone.js": "^0.8.4"
   },
+  "gitHead": "e728ed826214e5f977f0cbdb67c9e8ae36e5722f",
+  "homepage": "https://angular-maps.com",
   "jspm": {
     "jspmNodeConversion": false,
     "dependencies": {
       "@angular/common": "^4.0.0 || ^2.0.0",
       "@angular/core": "^4.0.0 || ^2.0.0"
     }
-  }
+  },
+  "keywords": [
+    "angular",
+    "ng",
+    "google-maps",
+    "maps",
+    "google",
+    "gmaps",
+    "ng2",
+    "angular2"
+  ],
+  "license": "MIT",
+  "name": "@agm/core-src",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular/common": "^4.0.0 || ^2.0.0",
+    "@angular/core": "^4.0.0 || ^2.0.0"
+  },
+  "readme": "[![AGM - Angular Google Maps](assets/images/angular-google-maps-logo.png)](https://angular-maps.com/)\r\n\r\n# AGM - Angular Google Maps\r\n\r\nAngular 2+ components for Google Maps. (Previously known as angular2-google-maps)\r\n\r\n-----\r\n\r\n**CAUTION:** The project name has changed from `angular2-google-maps` maps to `AGM - Angular Google Maps` because [#itsJustAngular](http://angularjs.blogspot.de/2017/01/branding-guidelines-for-angular-and.html) and we want to support all upcomming Angular versions.\r\n\r\nOld package name: `angular2-google-maps`  \r\nNew package name: `@agm/core`\r\n\r\n**==> Please see the [CHANGELOG.md](CHANGELOG.md) file for more migration details.**\r\n\r\n----\r\n\r\n[Website](https://angular-maps.com/) | [Demo](http://plnkr.co/edit/YX7W20?p=preview) | [Chat](https://gitter.im/SebastianM/angular2-google-maps) | [API Documentation](https://angular-maps.com/docs/api/latest/ts/) | [Twitter](https://twitter.com/Sebamueller)\r\n\r\n-----\r\n\r\n[![Build Status](https://travis-ci.org/SebastianM/angular-google-maps.svg?branch=master)](https://travis-ci.org/SebastianM/angular-google-maps) [![Join the chat at https://gitter.im/SebastianM/angular2-google-maps](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SebastianM/angular2-google-maps?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![npm version](https://badge.fury.io/js/%40agm%2Fcore.svg)](https://www.npmjs.com/package/@agm/core) [![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors)\r\n\r\n| Package                               | Downloads                                                                       |\r\n|---------------------------------------|---------------------------------------------------------------------------------|\r\n| New package name @agm/core            | ![@agm/core](https://img.shields.io/npm/dm/@agm/core.svg)                       |\r\n| Old package name angular2-google-maps | ![angular2-google-maps](https://img.shields.io/npm/dm/angular2-google-maps.svg) |\r\n---\r\n\r\n## Playing with AGM (Angular Google Maps)\r\n\r\nIf you just want to play with AGM and don't want to set up a full project, you can use the following Plunker. It has all the dependencies to play with Angular, Typescript and of course `AGM`:\r\n\r\n[&raquo; Play with Angular Google Maps on Plunker](http://plnkr.co/edit/YX7W20?p=preview)\r\n\r\n## Installation\r\n\r\n`AGM` gets shipped via the Node Package Manager. So make sure that you have [NodeJS](https://nodejs.org) installed.\r\n\r\n  You can install the package with the following command:\r\n\r\n```shell\r\nnpm install @agm/core\r\n```\r\n\r\nYou should also checkout the [Getting started](https://angular-maps.com/docs/getting-started.html#package-installation) guide for further information.\r\n\r\n## Contributors\r\n\r\nThanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):\r\n\r\n<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->\r\n| [<img src=\"https://avatars1.githubusercontent.com/u/275268?v=3\" width=\"100px;\"/><br /><sub>Sebastian Müller</sub>](http://twitter.com/Sebamueller)<br />[💬](#question-SebastianM \"Answering Questions\") [🐛](https://github.com/SebastianM/angular-google-maps/issues?q=author%3ASebastianM \"Bug reports\") [💻](https://github.com/SebastianM/angular-google-maps/commits?author=SebastianM \"Code\") | [<img src=\"https://avatars0.githubusercontent.com/u/7661457?v=3\" width=\"100px;\"/><br /><sub>Lazar Ljubenović</sub>](https://github.com/lazarljubenovic)<br />[💬](#question-lazarljubenovic \"Answering Questions\") [🐛](https://github.com/SebastianM/angular-google-maps/issues?q=author%3Alazarljubenovic \"Bug reports\") [💻](https://github.com/SebastianM/angular-google-maps/commits?author=lazarljubenovic \"Code\") | [<img src=\"https://avatars2.githubusercontent.com/u/963301?v=3\" width=\"100px;\"/><br /><sub>Brian Singer</sub>](http://localpro.me)<br />[💬](#question-brian-singer \"Answering Questions\") [💻](https://github.com/SebastianM/angular-google-maps/commits?author=brian-singer \"Code\") [📖](https://github.com/SebastianM/angular-google-maps/commits?author=brian-singer \"Documentation\") [💡](#example-brian-singer \"Examples\") | [<img src=\"https://avatars2.githubusercontent.com/u/14409?v=3\" width=\"100px;\"/><br /><sub>Alex Weber</sub>](https://twitter.com/alexweber15)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=alexweber \"Code\") | [<img src=\"https://avatars3.githubusercontent.com/u/7057692?v=3\" width=\"100px;\"/><br /><sub>parmod-arora</sub>](https://github.com/parmod-arora)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=parmod-arora \"Code\") | [<img src=\"https://avatars0.githubusercontent.com/u/1503474?v=3\" width=\"100px;\"/><br /><sub>Jinder</sub>](http://kangaroom.net/)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=jinder \"Code\") | [<img src=\"https://avatars2.githubusercontent.com/u/638836?v=3\" width=\"100px;\"/><br /><sub>Andreas Rammhold</sub>](https://github.com/andir)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=andir \"Code\") |\r\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: |\r\n| [<img src=\"https://avatars0.githubusercontent.com/u/16093233?v=3\" width=\"100px;\"/><br /><sub>Toshiyuki Ichige</sub>](https://github.com/TSHiYK)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=TSHiYK \"Code\") | [<img src=\"https://avatars3.githubusercontent.com/u/547516?v=3\" width=\"100px;\"/><br /><sub>staticint</sub>](https://github.com/staticint)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=staticint \"Code\") | [<img src=\"https://avatars1.githubusercontent.com/u/1966467?v=3\" width=\"100px;\"/><br /><sub>Tim</sub>](http://www.ghostmole.com)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=Tempus35 \"Code\") | [<img src=\"https://avatars1.githubusercontent.com/u/160391?v=3\" width=\"100px;\"/><br /><sub>Rafał</sub>](https://github.com/rafalh)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=rafalh \"Code\") | [<img src=\"https://avatars2.githubusercontent.com/u/791137?v=3\" width=\"100px;\"/><br /><sub>José Luis Di Biase</sub>](http://www.camba.coop)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=josx \"Code\") | [<img src=\"https://avatars2.githubusercontent.com/u/5773490?v=3\" width=\"100px;\"/><br /><sub>Jordan Frankfurt</sub>](https://github.com/JFrankfurt)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=JFrankfurt \"Code\") | [<img src=\"https://avatars0.githubusercontent.com/u/7952803?v=3\" width=\"100px;\"/><br /><sub>DominikAngerer</sub>](https://dominikangerer.com)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=DominikAngerer \"Code\") |\r\n| [<img src=\"https://avatars3.githubusercontent.com/u/7984168?v=3\" width=\"100px;\"/><br /><sub>Carl</sub>](https://github.com/carl09)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=carl09 \"Code\") | [<img src=\"https://avatars1.githubusercontent.com/u/12588436?v=3\" width=\"100px;\"/><br /><sub>msterba</sub>](https://github.com/msterba)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=msterba \"Code\") | [<img src=\"https://avatars2.githubusercontent.com/u/7057665?v=3\" width=\"100px;\"/><br /><sub>B</sub>](https://github.com/b264)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=b264 \"Code\") | [<img src=\"https://avatars0.githubusercontent.com/u/2433183?v=3\" width=\"100px;\"/><br /><sub>Jim</sub>](http://jimulle.com)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=jimulle \"Code\") | [<img src=\"https://avatars1.githubusercontent.com/u/3471756?v=3\" width=\"100px;\"/><br /><sub>Demian Holderegger</sub>](https://github.com/demianh)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=demianh \"Code\") | [<img src=\"https://avatars2.githubusercontent.com/u/6187137?v=3\" width=\"100px;\"/><br /><sub>Devin Despain</sub>](https://github.com/dangerdespain)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=dangerdespain \"Code\") | [<img src=\"https://avatars0.githubusercontent.com/u/10988488?v=3\" width=\"100px;\"/><br /><sub>IlianSchokkaert</sub>](http://www.juniortoinfinity.com/)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=IlianSchokkaert \"Code\") |\r\n| [<img src=\"https://avatars1.githubusercontent.com/u/20668183?v=3\" width=\"100px;\"/><br /><sub>svarzee</sub>](https://github.com/svarzee)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=svarzee \"Code\") | [<img src=\"https://avatars1.githubusercontent.com/u/5211330?v=3\" width=\"100px;\"/><br /><sub>Goran Spasojevic</sub>](http://gorango.me)<br />[💻](https://github.com/SebastianM/angular-google-maps/commits?author=gorango \"Code\") |\r\n<!-- ALL-CONTRIBUTORS-LIST:END -->\r\n\r\nThis project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastianM/angular-google-maps.git"
+  },
+  "scripts": {
+    "build": "npm run lint && npm run scripts && npm run packagejson && npm run copyassets",
+    "bundle:umd": "rollup -c rollup.config.js",
+    "ci": "npm run build && npm run test",
+    "clang:format": "clang-format --glob=src/**/*.ts -i",
+    "clean": "rimraf dist && rimraf .tmp && mkdir dist && mkdir .tmp && rimraf 'src/**/*.ngfactory.ts'",
+    "copyassets": "cp -R assets/release/* dist/core && cp LICENSE dist/core",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "ngc:esm": "ngc -p tsconfig.json",
+    "packagejson": "node ./scripts/create-package-json.js",
+    "postngc:esm": "npm run postngc:esm-part1 && npm run postngc:esm-part2 && npm run postngc:esm-part3",
+    "postngc:esm-part1": "rmdir dist && mkdir dist",
+    "postngc:esm-part2": "cp -R .tmp/esm/src/* dist/",
+    "postngc:esm-part3": "rimraf src/**/*.ngfactory.ts",
+    "prebuild": "npm run clean",
+    "scripts": "npm run ngc:esm && npm run bundle:umd",
+    "test": "karma start",
+    "test:watch": "karma start --no-single-run --auto-watch"
+  },
+  "version": "1.0.0-beta.0"
 }
