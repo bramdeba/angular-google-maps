@@ -8,7 +8,6 @@
         "outDir": ".tmp/esm",
         "rootDir": ".",
         "sourceMap": true,
-        "allowJs": true,
         "removeComments": false,
         "moduleResolution": "node",
         "declaration": true,

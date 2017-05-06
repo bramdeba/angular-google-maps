@@ -30,6 +30,10 @@ export class MarkerManager {
     });
   }
 
+  getMarkers(): Map<AgmMarker, Promise<Marker>> {
+    return this._markers;
+  }
+
   updateMarkerPosition(marker: AgmMarker): Promise<void> {
     return this._markers.get(marker).then(
         (m: Marker) => m.setPosition({lat: marker.latitude, lng: marker.longitude}));

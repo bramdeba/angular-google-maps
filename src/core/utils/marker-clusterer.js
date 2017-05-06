@@ -1052,6 +1052,9 @@ ClusterIcon.prototype.triggerClusterClick = function() {
   if (markerClusterer.isZoomOnClick()) {
     // Zoom into the cluster.
     this.map_.fitBounds(this.cluster_.getBounds());
+    google.maps.event.addListenerOnce(this.map_, 'bounds_changed', function(event) {
+      this.setZoom(this.getZoom() - 1);
+    });
   }
 };
 
