@@ -92,6 +92,27 @@ export class GoogleMapsAPIWrapper {
     });
   }
 
+  getAddressFromLatLng(lat: number, lng: number): Promise<{}> {
+    return new Promise(function(resolve: any, reject: any){
+    this._loader.load().then(function(){
+      const latlng = new google.maps.LatLng(lat, lng);
+        new google.maps.Geocoder().geocode({
+          'latLng': latlng
+        }, function (results: any, status: any) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            if (results[1] && results[1].formatted_address) {
+              resolve();
+            } else {
+              reject(status);
+            }
+          } else {
+            reject(status);
+          }
+        });
+      }).catch((error: any) => reject(error));
+    });
+  }
+
   setCenter(latLng: mapTypes.LatLngLiteral): Promise<void> {
     return this._map.then((map: mapTypes.GoogleMap) => map.setCenter(latLng));
   }
