@@ -101,8 +101,8 @@ export class GoogleMapsAPIWrapper {
           'latLng': latlng
         }, function (results: any, status: any) {
           if (status === google.maps.GeocoderStatus.OK) {
-            if (results[1] && results[1].formatted_address) {
-              resolve();
+            if (results[1]) {
+              resolve(results[1]);
             } else {
               reject(status);
             }
