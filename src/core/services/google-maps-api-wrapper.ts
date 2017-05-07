@@ -93,8 +93,9 @@ export class GoogleMapsAPIWrapper {
   }
 
   getAddressFromLatLng(lat: number, lng: number): Promise<{}> {
+    const self = this;
     return new Promise(function(resolve: any, reject: any){
-    this._loader.load().then(function(){
+    self._loader.load().then(function(){
       const latlng = new google.maps.LatLng(lat, lng);
         new google.maps.Geocoder().geocode({
           'latLng': latlng
